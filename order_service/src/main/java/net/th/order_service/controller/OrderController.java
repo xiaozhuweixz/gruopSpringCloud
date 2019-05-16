@@ -29,7 +29,7 @@ public class OrderController {
 
 
     @RequestMapping("save")
-   // @HystrixCommand(fallbackMethod = "saveOrderFail")
+    @HystrixCommand(fallbackMethod = "saveOrderFail")
     public Object save(@RequestParam("user_id")int userId, @RequestParam("product_id") int productId, HttpServletRequest request){
 
         String token = request.getHeader("token");
