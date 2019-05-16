@@ -38,7 +38,7 @@ public class ProductController {
      * @return
      */
     @RequestMapping("find")
-    public Object findById(int id, HttpServletRequest httpServletRequest){
+    public Object findById(int id){
 
 //        try {
 //            TimeUnit.SECONDS.sleep(1);
@@ -50,7 +50,7 @@ public class ProductController {
 
         Product result = new Product();
         BeanUtils.copyProperties(product,result);
-        result.setName( result.getName() + " data from port="+port +"调用集群机IP:"+ httpServletRequest.getRemotePort()+ "调用集群机子端口:"+ httpServletRequest.getRemoteAddr());
+        result.setName( result.getName() + " data from port="+port);
         return result;
     }
 
