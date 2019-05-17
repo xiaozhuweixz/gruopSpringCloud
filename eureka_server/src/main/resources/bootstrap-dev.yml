@@ -20,7 +20,7 @@
 # 127.0.0.1 peer3
 # 若配置eureka多台服务器集群，则修改peer1、peer2、peer3为对应服务器的IP
 spring:
-  profiles: peer1
+  #profiles: peer1
   application:
     name: spring-cloud-eureka
 server:
@@ -41,7 +41,7 @@ eureka:
 
 ---
 spring:
-  profiles: peer2
+  #profiles: peer2
   application:
     name: spring-cloud-eureka
 server:
@@ -54,7 +54,7 @@ eureka:
     registerWithEureka: true #是否将自己注册到eureka server，构建集群环境时，需将自己注册到集群中，默认为true
     fetchRegistry: true #是否从eureka server获取注册信息，构建集群环境时，需同步其他eureka server节点，默认为true
     serviceUrl:
-      defaultZone: http://Master/eureka/
+      defaultZone: http://Master:8761/eureka/
   #解决eureka server不剔除已停掉的节点问题，更改Eureka更新频率将打破服务器的自我保护功能
   server:
     enableSelfPreservation: false #设为false，关闭自我保护功能
