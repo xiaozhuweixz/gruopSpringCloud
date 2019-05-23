@@ -14,7 +14,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://peer2:8762/eureka/      # 将自己注册到eureka-server2这个Eureka上面去
+      defaultZone: http://120.79.155.122:8762/eureka/      # 将自己注册到eureka-server2这个Eureka上面去
 ---
 spring:
   profiles: eureka-server2
@@ -27,7 +27,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://Master:8761/eureka/
+      defaultZone: http://47.104.143.113:8761/eureka/
 
 
 
