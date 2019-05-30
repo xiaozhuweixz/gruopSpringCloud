@@ -16,6 +16,8 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
 #/order-service/api/v1/order/save?user_id=2&product_id=1
+
+
 #自定义路由映射
 zuul:
   routes:
