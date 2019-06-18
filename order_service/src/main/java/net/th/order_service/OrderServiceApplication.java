@@ -1,5 +1,6 @@
 package net.th.order_service;
 
+import org.springframework.amqp.core.Queue;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -27,5 +28,8 @@ public class OrderServiceApplication {
         return new RestTemplate();
     }
 
-
+    @Bean
+    public Queue Queue() {
+        return new Queue("hello_queue");
+    }
 }
