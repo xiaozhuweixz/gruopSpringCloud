@@ -6,7 +6,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://120.79.155.122:8762/eureka/,http://47.104.143.113:8761/eureka/ #http://peer1:8761/eureka/,http://pee2:8762/eureka/,http://peer3:8763/eureka/
+      defaultZone: http://120.79.155.122:8762/eureka/,http://47.104.143.113:8761/eureka/,http://peer3:8763/eureka/ #http://peer1:8761/eureka/,http://pee2:8762/eureka/,http://peer3:8763/eureka/
   instance:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
