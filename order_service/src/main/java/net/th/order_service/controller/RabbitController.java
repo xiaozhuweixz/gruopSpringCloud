@@ -24,6 +24,7 @@ public class RabbitController {
 
         String message = "hello_queue_one"+ new Date();
 
+
 //      amqpTemplate.convertAndSend(String.valueOf(new Queue("hello_tow")),message);
         for (int i=0; i<100; i++) {
             amqpTemplate.convertAndSend("hello_queue",message+i);
