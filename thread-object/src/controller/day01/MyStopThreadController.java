@@ -40,6 +40,5 @@ public class MyStopThreadController implements Runnable{
         TimeUnit.SECONDS.sleep(1L);
         //thread.stop();  //废弃方法，开发中不要使用。因为一调用，线程就立刻停止，此时有可能引发相应的线程安全性问题
         thread.interrupt();
-
     }
 }
