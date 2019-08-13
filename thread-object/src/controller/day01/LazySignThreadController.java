@@ -28,7 +28,7 @@ public class LazySignThreadController {
 //                    lazySignThreadController = new LazySignThreadController();
 //                }
 //            }
-// ----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------
             lazySignThreadController = new LazySignThreadController();
         }
         return lazySignThreadController;
