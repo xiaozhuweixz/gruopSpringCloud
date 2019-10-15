@@ -10,6 +10,10 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    #解决eureka server不剔除已停掉的节点问题，更改Eureka更新频率将打破服务器的自我保护功能
+  server:
+      enableSelfPreservation: false #设为false，关闭自我保护功能
+      evictionIntervalTimerInMs: 4000 #清理间隔（单位毫秒
 
 
 # 需配置host文件，
